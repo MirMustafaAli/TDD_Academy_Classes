@@ -8,8 +8,8 @@ public class Measurement {
     }
 
 
-    private boolean isEquals(Measurement anotherDistance) {
-        return this.value == anotherDistance.unit.convertTo(anotherDistance.value, this.unit);
+    private boolean isEquals(Measurement anotherMeasurement) {
+        return this.value == anotherMeasurement.unit.convertTo(anotherMeasurement.value, this.unit);
     }
 
     @Override
@@ -22,4 +22,8 @@ public class Measurement {
     }
 
 
+    @Override
+    public String toString() {
+        return value+" "+unit;
+    }
 }

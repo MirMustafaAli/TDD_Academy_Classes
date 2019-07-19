@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
 
 public enum UnitType {
+    DISTANCE,WEIGHT,TEMPERATURE
 }

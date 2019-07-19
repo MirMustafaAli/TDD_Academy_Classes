@@ -1,8 +1,7 @@
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class MeasurementTest {
 
@@ -74,6 +73,31 @@ public class MeasurementTest {
 
     }
 
+    @Test
+    public void equals_returnsTrue_Given100CelsiusAnd212Fahrenheit() {
+        Measurement hundredCelsius = new Measurement(100,Unit.CELSIUS);
+        Measurement twoHundredTwelveFahrenheit = new Measurement(212,Unit.FAHRENHEIT);
 
+        assertEquals(hundredCelsius,twoHundredTwelveFahrenheit);
+
+    }
+
+    @Test
+    public void equals_returnsTrue_Given212FahrenheitAnd100Celsius() {
+        Measurement hundredCelsius = new Measurement(100,Unit.CELSIUS);
+        Measurement twoHundredTwelveFahrenheit = new Measurement(212,Unit.FAHRENHEIT);
+
+        assertEquals(twoHundredTwelveFahrenheit,hundredCelsius);
+
+    }
+
+    @Test
+    public void equals_returnsTrue_Given0CelsiusAnd273Point15Kelvin() {
+        Measurement zeroCelsius = new Measurement(0,Unit.CELSIUS);
+        Measurement twoSeventyThreePointOneFiveFahrenheit = new Measurement(273.15,Unit.KELVIN);
+
+        assertEquals(zeroCelsius,twoSeventyThreePointOneFiveFahrenheit);
+
+    }
 
 }
